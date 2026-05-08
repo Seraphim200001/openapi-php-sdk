@@ -26,6 +26,12 @@
             "email": "bianco@javanile.org",
             "homepage": "https://github.com/francescobianco",
             "role": "Contributor"
+        },
+        {
+            "name": "Claude Code (Anthropic)",
+            "email": "noreply@anthropic.com",
+            "homepage": "https://claude.ai/code",
+            "role": "AI Contributor"
         }
     ],
     "keywords": [
