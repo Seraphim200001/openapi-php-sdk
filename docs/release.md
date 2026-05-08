@@ -23,7 +23,9 @@ The **1.3.0** release of the Openapi® PHP SDK introduces a redesigned transport
 ### 👥 Contributors
 
 * Added full author attribution in `composer.json` — Lorenzo Paderi, Mario Ugurcu, Francesco Bianco, and Claude Code.
-* Work from the `upkeep` branch (Mario Ugurcu) has been properly integrated and credited.
+* Work from the `upkeep` branch has been properly integrated and credited.
+
+A special thank you to **Mario Ugurcu** ([@Seraphim200001](https://github.com/Seraphim200001)) for contributing the transport injection architecture and the DotEnv support that form the core of this release. Your work made this possible.
 
 ### 🚀 Looking Ahead
 
