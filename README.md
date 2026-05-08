@@ -56,7 +56,7 @@ composer require openapi/openapi-sdk
 ### Token Generation
 
 ```php
-use OpenApi\OauthClient;
+use Openapi\OauthClient;
 
 $oauthClient = new OauthClient('username', 'apikey', true); // true for test environment
 
@@ -73,7 +73,7 @@ $token = $tokenData['token'];
 ### Making API Calls
 
 ```php
-use OpenApi\Client;
+use Openapi\Client;
 
 $client = new Client($token);
 

@@ -2,7 +2,7 @@
 
 namespace Openapi;
 
-class OpenapiOauthClient
+class OauthClient
 {
     private string $url;
     private string $username;

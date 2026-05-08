@@ -1,17 +1,17 @@
 <?php
 
-use Openapi\OpenapiOauthClient;
+use Openapi\OauthClient;
 use PHPUnit\Framework\TestCase;
 
-final class OpenapiOauthClientTest extends TestCase
+final class OauthClientTest extends TestCase
 {
     private string $username = 'test_username';
     private string $apikey = 'test_apikey';
 
     public function testOauthClientCreation(): void
     {
-        $client = new OpenapiOauthClient($this->username, $this->apikey, true);
-        $this->assertInstanceOf(OpenapiOauthClient::class, $client);
+        $client = new OauthClient($this->username, $this->apikey, true);
+        $this->assertInstanceOf(OauthClient::class, $client);
     }
 
     public function testOauthClientCanBeCreatedFromEnvironmentVariables(): void
@@ -24,14 +24,14 @@ final class OpenapiOauthClientTest extends TestCase
         $this->assertNotSame('', $username, 'OPENAPI_USERNAME is empty');
         $this->assertNotSame('', $apikey, 'OPENAPI_SANDBOX_KEY is empty');
 
-        $client = new OpenapiOauthClient($username, $apikey, true);
-        $this->assertInstanceOf(OpenapiOauthClient::class, $client);
+        $client = new OauthClient($username, $apikey, true);
+        $this->assertInstanceOf(OauthClient::class, $client);
     }
 
     public function testOauthClientProductionMode(): void
     {
-        $client = new OpenapiOauthClient($this->username, $this->apikey, false);
-        $this->assertInstanceOf(OpenapiOauthClient::class, $client);
+        $client = new OauthClient($this->username, $this->apikey, false);
+        $this->assertInstanceOf(OauthClient::class, $client);
     }
 
     public function testEnvironmentVariablesAreAvailable(): void
@@ -47,7 +47,7 @@ final class OpenapiOauthClientTest extends TestCase
     {
         $this->markTestSkipped('Requires valid credentials for integration test');
 
-        $client = new OpenapiOauthClient($this->username, $this->apikey, true);
+        $client = new OauthClient($this->username, $this->apikey, true);
         $scopes = [
             'GET:test.imprese.openapi.it/advance',
             'POST:test.postontarget.com/fields/country'

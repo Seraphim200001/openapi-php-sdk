@@ -74,7 +74,7 @@ The `examples/` directory contains practical usage demonstrations:
 
 ### PSR-4 Autoloading
 
-The project uses PSR-4 autoloading with `OpenApi\` namespace mapped to `src/` directory.
+The project uses PSR-4 autoloading with `Openapi\` namespace mapped to `src/` directory.
 
 ## Requirements
 

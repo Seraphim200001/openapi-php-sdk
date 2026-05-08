@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Openapi\OpenapiOauthClient;
+use Openapi\OauthClient;
 use Openapi\OpenapiClient;
 use Openapi\OpenapiException;
 
@@ -11,7 +11,7 @@ try {
 
     // Step 1: Create OAuth client
     echo "Step 1: Creating OAuth client..." . PHP_EOL;
-    $oauthClient = new OpenapiOauthClient('<your_username>', '<your_apikey>', true);
+    $oauthClient = new OauthClient('<your_username>', '<your_apikey>', true);
     echo "✓ OAuth client created" . PHP_EOL . PHP_EOL;
 
     // Step 2: Generate token
