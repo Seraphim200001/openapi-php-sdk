@@ -2,7 +2,7 @@
 
 namespace Openapi\Cache;
 
-interface OpenapiCacheInterface
+interface CacheInterface
 {
     public function get(string $key): mixed;
 

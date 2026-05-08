@@ -1,8 +1,8 @@
 <?php
 
-namespace Openapi\Environment\DotEnv;
+namespace Openapi\Environment;
 
-class OpenapiDotEnv
+class DotEnv
 {
     protected string $path;
 

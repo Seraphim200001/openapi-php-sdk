@@ -82,12 +82,12 @@ class OauthClient
 
         // TODO: Provide more graceful error message with connection context (timeout, DNS, SSL, etc.)
         if ($response === false) {
-            throw new OpenapiException("cURL Error: " . $error);
+            throw new Exception("cURL Error: " . $error);
         }
 
         // TODO: Parse response body and provide structured error details with auth-specific hints
         if ($httpCode >= 400) {
-            throw new OpenapiException("HTTP Error {$httpCode}: " . $response);
+            throw new Exception("HTTP Error {$httpCode}: " . $response);
         }
 
         return $response;

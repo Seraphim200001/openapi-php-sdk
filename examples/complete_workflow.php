@@ -3,8 +3,8 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Openapi\OauthClient;
-use Openapi\OpenapiClient;
-use Openapi\OpenapiException;
+use Openapi\Client;
+use Openapi\Exception;
 
 try {
     echo "=== OpenAPI PHP SDK Complete Workflow Example ===" . PHP_EOL . PHP_EOL;
@@ -25,7 +25,7 @@ try {
     $tokenData = json_decode($tokenResult, true);
 
     if (!isset($tokenData['token'])) {
-        throw new OpenapiException('Failed to generate token: ' . $tokenResult);
+        throw new Exception('Failed to generate token: ' . $tokenResult);
     }
 
     $token = $tokenData['token'];
@@ -33,7 +33,7 @@ try {
 
     // Step 3: Create API client
     echo "Step 3: Creating API client..." . PHP_EOL;
-    $apiClient = new OpenapiClient($token);
+    $apiClient = new Client($token);
     echo "✓ API client created" . PHP_EOL . PHP_EOL;
 
     // Step 4: Make API calls
@@ -62,7 +62,7 @@ try {
 
     echo "=== Workflow completed successfully! ===" . PHP_EOL;
 
-} catch (OpenapiException $e) {
+} catch (Exception $e) {
     echo "✗ Error: " . $e->getMessage() . PHP_EOL;
 
     if ($e->getHttpCode()) {

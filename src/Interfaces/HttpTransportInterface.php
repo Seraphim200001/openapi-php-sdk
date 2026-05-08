@@ -2,7 +2,7 @@
 
 namespace Openapi\Interfaces;
 
-interface OpenapiHttpTransportInterface
+interface HttpTransportInterface
 {
     public function request(
         string $method,

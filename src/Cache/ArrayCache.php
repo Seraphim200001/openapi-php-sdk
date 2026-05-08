@@ -2,7 +2,7 @@
 
 namespace Openapi\Cache;
 
-class OpenapiArrayCache implements OpenapiCacheInterface
+class ArrayCache implements CacheInterface
 {
     private array $cache = [];
     private array $expiry = [];

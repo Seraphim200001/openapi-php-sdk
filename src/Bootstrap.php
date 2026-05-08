@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Openapi\Environment\DotEnv\OpenapiDotEnv;
+use Openapi\Environment\DotEnv;
 use Composer\Autoload\ClassLoader;
 
 if (!function_exists('shouldLoad')) {
@@ -27,7 +27,7 @@ if (!function_exists('findProjectRoot')) {
             return null;
         }
 
-        $reflection = new ReflectionClass(ClassLoader::class);
+        $reflection = new \ReflectionClass(ClassLoader::class);
         $vendorDir = dirname($reflection->getFileName(), 2);
         $projectRoot = dirname($vendorDir);
 
@@ -38,6 +38,6 @@ if (!function_exists('findProjectRoot')) {
 if (shouldLoad()) {
     $projectRoot = findProjectRoot();
     if ($projectRoot !== null) {
-        (new OpenapiDotEnv($projectRoot . DIRECTORY_SEPARATOR . '.env'))->load();
+        (new DotEnv($projectRoot . DIRECTORY_SEPARATOR . '.env'))->load();
     }
 }

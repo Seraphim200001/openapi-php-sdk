@@ -2,23 +2,23 @@
 
 namespace Openapi;
 
-use Openapi\Interfaces\OpenapiHttpTransportInterface;
-use Openapi\Transports\OpenapiCurlTransport;
+use Openapi\Interfaces\HttpTransportInterface;
+use Openapi\Transports\CurlTransport;
 use Psr\Http\Client\ClientInterface as PsrClientInterface;
 
-class OpenapiClient
+class Client
 {
     private string $token;
-    private OpenapiHttpTransportInterface|PsrClientInterface $transport;
+    private HttpTransportInterface|PsrClientInterface $transport;
     private ?string $baseUrl = null;
 
-    public function __construct(?string $token = null, OpenapiHttpTransportInterface|PsrClientInterface|null $transport = null)
+    public function __construct(?string $token = null, HttpTransportInterface|PsrClientInterface|null $transport = null)
     {
         $this->token = $token ?? getenv('OPEN_API_TOKEN');
         if (getenv('OPENAPI_BASE_URL')) {
             $this->baseUrl = getenv('OPENAPI_BASE_URL');
         }
-        $this->transport = $transport ?? new OpenapiCurlTransport($this->token);
+        $this->transport = $transport ?? new CurlTransport($this->token);
     }
 
     public function request(

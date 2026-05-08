@@ -2,7 +2,7 @@
 
 namespace Openapi\Interfaces;
 
-interface OpenapiDotEnvInterface
+interface DotEnvInterface
 {
     public function load(): void;
 }

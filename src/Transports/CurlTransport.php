@@ -2,9 +2,9 @@
 
 namespace Openapi\Transports;
 
-use Openapi\Interfaces\OpenapiHttpTransportInterface;
+use Openapi\Interfaces\HttpTransportInterface;
 
-final class OpenapiCurlTransport implements OpenapiHttpTransportInterface
+final class CurlTransport implements HttpTransportInterface
 {
     public function __construct(
         private ?string $token = null

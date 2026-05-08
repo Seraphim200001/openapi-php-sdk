@@ -1,27 +1,24 @@
 <?php
 
-use Openapi\OpenapiClient;
+use Openapi\Client;
 use PHPUnit\Framework\TestCase;
 
-final class OpenapiApiClientTest extends TestCase
+final class ApiClientTest extends TestCase
 {
     private string $testToken = 'test_token_123';
 
     public function testClientCreation(): void
     {
-        $client = new OpenapiClient($this->testToken);
-        $this->assertInstanceOf(OpenapiClient::class, $client);
+        $client = new Client($this->testToken);
+        $this->assertInstanceOf(Client::class, $client);
     }
 
     public function testGetRequest(): void
     {
         $this->markTestSkipped('Requires valid token for integration test');
 
-        $client = new OpenapiClient($this->testToken);
-        $params = [
-            'denominazione' => 'altravia',
-            'provincia' => 'RM',
-        ];
+        $client = new Client($this->testToken);
+        $params = ['denominazione' => 'altravia', 'provincia' => 'RM'];
 
         $result = $client->get('https://test.company.openapi.com/IT-advanced', $params);
         $this->assertIsString($result);
@@ -31,13 +28,8 @@ final class OpenapiApiClientTest extends TestCase
     {
         $this->markTestSkipped('Requires valid token for integration test');
 
-        $client = new OpenapiClient($this->testToken);
-        $payload = [
-            'limit' => 10,
-            'query' => [
-                'country_code' => 'IT'
-            ]
-        ];
+        $client = new Client($this->testToken);
+        $payload = ['limit' => 10, 'query' => ['country_code' => 'IT']];
 
         $result = $client->post('https://test.postontarget.com/fields/country', $payload);
         $this->assertIsString($result);
@@ -47,10 +39,8 @@ final class OpenapiApiClientTest extends TestCase
     {
         $this->markTestSkipped('Requires valid token for integration test');
 
-        $client = new OpenapiClient($this->testToken);
-        $payload = ['test' => 'data'];
-
-        $result = $client->put('https://example.com/api', $payload);
+        $client = new Client($this->testToken);
+        $result = $client->put('https://example.com/api', ['test' => 'data']);
         $this->assertIsString($result);
     }
 
@@ -58,8 +48,7 @@ final class OpenapiApiClientTest extends TestCase
     {
         $this->markTestSkipped('Requires valid token for integration test');
 
-        $client = new OpenapiClient($this->testToken);
-
+        $client = new Client($this->testToken);
         $result = $client->delete('https://example.com/api/123');
         $this->assertIsString($result);
     }
@@ -68,10 +57,8 @@ final class OpenapiApiClientTest extends TestCase
     {
         $this->markTestSkipped('Requires valid token for integration test');
 
-        $client = new OpenapiClient($this->testToken);
-        $payload = ['update' => 'data'];
-
-        $result = $client->patch('https://example.com/api/123', $payload);
+        $client = new Client($this->testToken);
+        $result = $client->patch('https://example.com/api/123', ['update' => 'data']);
         $this->assertIsString($result);
     }
 }

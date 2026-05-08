@@ -58,7 +58,7 @@
             "Openapi\\": "src"
         },
         "files": [
-            "src/OpenapiBootstrap.php"
+            "src/Bootstrap.php"
         ]
     },
     "autoload-dev": {

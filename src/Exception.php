@@ -2,7 +2,7 @@
 
 namespace Openapi;
 
-class OpenapiException extends \Exception
+class Exception extends \Exception
 {
     private mixed $serverResponse = null;
     private mixed $headers = null;
@@ -10,7 +10,7 @@ class OpenapiException extends \Exception
     private ?int $httpCode = null;
 
     /**
-     * TODO: Utilize this method in OpenapiClient and OauthClient to provide structured error context
+     * TODO: Utilize this method in Client and OauthClient to provide structured error context
      */
     public function setServerResponse(mixed $response, mixed $headers = null, mixed $rawResponse = null, ?int $httpCode = null): void
     {
