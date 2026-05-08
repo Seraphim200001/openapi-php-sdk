@@ -5,7 +5,21 @@
     "authors": [
         {
             "name": "Altravia",
-            "email": "info@altravia.com"
+            "email": "info@altravia.com",
+            "homepage": "https://www.altravia.com",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Lorenzo Paderi",
+            "email": "l.paderi@altravia.com",
+            "homepage": "https://github.com/lpaderiAltravia",
+            "role": "Developer"
+        },
+        {
+            "name": "Mario Ugurcu",
+            "email": "mario.ugurcu@wum-studios.de",
+            "homepage": "https://github.com/Seraphim200001",
+            "role": "Contributor"
         }
     ],
     "keywords": [
