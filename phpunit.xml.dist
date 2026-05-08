@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true">
+
+    <testsuites>
+        <testsuite name="unit">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <env name="OPENAPI_BASE_URL" value="https://example.com" force="true"/>
+        <env name="OPENAPI_USERNAME" value="test_user" force="true"/>
+        <env name="OPENAPI_SANDBOX_KEY" value="test_key" force="true"/>
+        <env name="OPENAPI_OAUTH_SANDBOX_URL" value="https://api.com" force="true"/>
+        <env name="OPENAPI_OAUTH_URL" value="https://api.com" force="true"/>
+    </php>
+</phpunit>

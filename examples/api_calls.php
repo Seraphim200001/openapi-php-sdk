@@ -2,16 +2,16 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use OpenApi\Client;
+use Openapi\OpenapiClient;
 
 try {
     $token = '<your_access_token>';
-    $client = new Client($token);
+    $client = new OpenapiClient($token);
 
     // GET request with parameters
     $params = [
         'denominazione' => 'altravia',
-        'provincia' => 'RM', 
+        'provincia' => 'RM',
         'codice_ateco' => '6201'
     ];
 

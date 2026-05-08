@@ -12,7 +12,8 @@
     "require": {
         "php": ">=8.0.0",
         "ext-curl": "*",
-        "ext-json": "*"
+        "ext-json": "*",
+        "psr/http-client": "^1.0"
     },
     "require-dev": {
         "symfony/dotenv": "^5.3",
@@ -20,7 +21,15 @@
     },
     "autoload": {
         "psr-4": {
-            "OpenApi\\": "src"
+            "Openapi\\": "src"
+        },
+        "files": [
+            "src/OpenapiBootstrap.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
         }
     },
     "scripts": {
