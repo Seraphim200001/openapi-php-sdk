@@ -2,7 +2,7 @@
 
 namespace Openapi;
 
-class Exception extends \Exception
+class ApiException extends \Exception
 {
     private mixed $serverResponse = null;
     private mixed $headers = null;

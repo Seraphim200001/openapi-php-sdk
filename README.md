@@ -25,7 +25,7 @@ Before using the Openapi PHP Client, you will need an account at [Openapi](https
 
 ## Features
 
-- **Agnostic Design**: No API-specific classes, works with any OpenAPI service
+- **Agnostic Design**: No API-specific classes, works with any Openapi service
 - **Minimal Dependencies**: Only requires PHP 8.0+ and cURL
 - **OAuth Support**: Built-in OAuth client for token management  
 - **HTTP Primitives**: GET, POST, PUT, DELETE, PATCH methods

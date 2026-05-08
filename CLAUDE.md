@@ -36,7 +36,7 @@ make dev-push
 
 ## Architecture Overview
 
-This is a minimal, agnostic PHP SDK for OpenAPI services with only essential HTTP primitives. The architecture follows a clean, simple design inspired by the Rust implementation found in `reference/openapi-rust-sdk/`.
+This is a minimal, agnostic PHP SDK for Openapi services with only essential HTTP primitives. The architecture follows a clean, simple design inspired by the Rust implementation found in `reference/openapi-rust-sdk/`.
 
 ### Core Components
 
@@ -60,7 +60,7 @@ This is a minimal, agnostic PHP SDK for OpenAPI services with only essential HTT
 
 ### Key Design Principles
 
-1. **Agnostic**: No API-specific classes - works with any OpenAPI service
+1. **Agnostic**: No API-specific classes - works with any Openapi service
 2. **Minimal**: Only core HTTP primitives, minimal dependencies (PHP 8.0+, cURL, JSON)
 3. **Clean Interface**: Simple method signatures following REST conventions
 4. **Environment Flexibility**: Built-in test/production environment switching

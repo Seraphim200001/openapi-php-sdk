@@ -52,4 +52,4 @@ To report bugs or request features, please **open an issue** on GitHub including
 - Steps to reproduce (if applicable).
 - Relevant logs or error output.
 
-Thank you for helping improve the OpenAPI PHP SDK!
+Thank you for helping improve the Openapi PHP SDK!
