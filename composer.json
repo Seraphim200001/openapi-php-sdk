@@ -8,6 +8,14 @@
             "email": "info@altravia.com"
         }
     ],
+    "keywords": [
+        "api", "rest", "http", "client", "sdk", "oauth", "oauth2", "token",
+        "sms", "pec", "email", "geocoding", "company", "business-registry",
+        "italy", "italian", "imprese", "visure", "catasto",
+        "laravel", "symfony", "codeigniter", "yii", "slim", "lumen",
+        "cakephp", "phalcon", "laminas", "zend", "october", "wordpress",
+        "php", "php8", "curl", "psr-18", "http-client", "guzzle"
+    ],
     "minimum-stability": "stable",
     "require": {
         "php": ">=8.0.0",
